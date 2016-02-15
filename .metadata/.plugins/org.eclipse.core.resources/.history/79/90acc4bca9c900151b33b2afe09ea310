@@ -1,0 +1,13 @@
+package test.dao;
+
+public class PasswordTest {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	public static String str2Md5(String inStr) {
+		
+	}
+}

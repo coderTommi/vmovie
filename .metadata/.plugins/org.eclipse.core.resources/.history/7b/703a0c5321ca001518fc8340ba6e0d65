@@ -1,0 +1,10 @@
+package com.ldl.ibatis.dbcp.dao.impl;
+
+import com.ldl.ibatis.dbcp.dao.UserDao;
+import com.ldl.ibatis.dbcp.dao.VMovieInfoDao;
+import com.ldl.ibatis.dbcp.dao.mapper.UserMapper;
+import com.ldl.ibatis.dbcp.pojo.User;
+
+public class VMovieInfoDaoImpl implements VMovieInfoDao {
+	
+}

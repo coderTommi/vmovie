@@ -1,0 +1,13 @@
+package com.ldl.service.impl;
+
+import com.ldl.service.RegisterService;
+
+public class RegisterServiceImpl implements RegisterService {
+	
+	@Override
+	public void register(String userId, String aliasName, String userPwd,
+			String email, String gender) {
+		
+	}
+
+}

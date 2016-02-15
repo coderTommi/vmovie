@@ -1,0 +1,20 @@
+package com.ldl.ibatis.dbcp.pojo;
+
+import java.sql.Timestamp;
+
+/**
+ * 视频信息pojol类.
+ * @author lidongliang
+ *
+ */
+public class VMovieInfo {
+	
+	private Integer movieSeq;
+	private String movieUrl;
+	private Integer userSeq;
+	private Timestamp createDate;
+	private String descMsg;
+	
+	
+
+}

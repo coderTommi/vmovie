@@ -1,0 +1,11 @@
+package com.ldl.service.impl;
+
+/**
+ * 注册类，可包括注册、密码重置等.
+ * @author lidongliang
+ *
+ */
+public interface RegisterService {
+	
+
+}

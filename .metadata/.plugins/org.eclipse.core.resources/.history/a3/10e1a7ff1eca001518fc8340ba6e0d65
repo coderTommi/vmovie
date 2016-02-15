@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+	
+ -->
+<mapper namespace="com.ldl.ibatis.dbcp.dao.mapper.VMovieInfoMapper">
+	<insert id="save" parameterType="User">
+		insert into vmovieinfo(movieurl,userseq,createdate,descmsg) values(#{movieUrl},#{userSeq},#{createDate},#{descMsg})
+	</insert>
+	
+	<resultMap type="com.ldl.ibatis.dbcp.pojo.VMovieInfo" id="getBySeqRes">
+		<result column="movieSeq" property="movieSeq"/>
+		<result column="movieUrl" property="movieUrl"/>
+		<result column="userSeq" property="userSeq"/>
+		<result column="createDate" property="createDate"/>
+		<result column="descMsg" property="descMsg"/>
+	</resultMap>
+	<select id="getBySeq" parameterType="java.lang.String" resultMap="getBySeqRes">
+		select * from vuser where userid = #{userId}
+	</select>
+</mapper>

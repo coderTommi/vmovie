@@ -1,0 +1,9 @@
+package com.ldl.ibatis.dbcp.pojo;
+/**
+ * 视频信息pojol类.
+ * @author lidongliang
+ *
+ */
+public class VMovieInfo {
+
+}

@@ -1,0 +1,50 @@
+package com.ldl.ibatis.dbcp.pojo;
+
+import java.sql.Timestamp;
+
+/**
+ * 评价信息.
+ * @author lidongliang
+ *
+ */
+public class EvaluateInfo {
+	
+	private int evaSeq;
+	private String evaMsg;
+	private int parentEva;
+	private int movieSeq;
+	private Timestamp createTime;
+	private int userseq,
+	public int getEvaSeq() {
+		return evaSeq;
+	}
+	public void setEvaSeq(int evaSeq) {
+		this.evaSeq = evaSeq;
+	}
+	public String getEvaMsg() {
+		return evaMsg;
+	}
+	public void setEvaMsg(String evaMsg) {
+		this.evaMsg = evaMsg;
+	}
+	public int getParentEva() {
+		return parentEva;
+	}
+	public void setParentEva(int parentEva) {
+		this.parentEva = parentEva;
+	}
+	public int getMovieSeq() {
+		return movieSeq;
+	}
+	public void setMovieSeq(int movieSeq) {
+		this.movieSeq = movieSeq;
+	}
+	public Timestamp getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Timestamp createTime) {
+		this.createTime = createTime;
+	}
+
+	
+}

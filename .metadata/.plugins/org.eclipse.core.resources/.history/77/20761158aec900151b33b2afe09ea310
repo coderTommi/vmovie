@@ -1,0 +1,5 @@
+package com.ldl.controller;
+
+public class IndexController {
+
+}

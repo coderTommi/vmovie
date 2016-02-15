@@ -1,0 +1,31 @@
+package com.ldl.ibatis.dbcp.dao.impl;
+
+import java.util.List;
+
+import com.ldl.ibatis.dbcp.dao.EvaluateInfoDao;
+import com.ldl.ibatis.dbcp.dao.mapper.EvaluateInfoMapper;
+import com.ldl.ibatis.dbcp.pojo.EvaluateInfo;
+
+/**
+ * 评价类Mapper.
+ * @author lidongliang
+ *
+ */
+public class EvaluateInfoDaoImpl implements EvaluateInfoDao {
+	
+	private EvaluateInfoMapper evaluateInfoMapper;
+	public void setEvaluateInfoMapper(EvaluateInfoMapper evaluateInfoMapper) {
+		this.evaluateInfoMapper = evaluateInfoMapper;
+	}
+	
+	public void save(EvaluateInfo info) {
+		evaluateInfoMapper.save(info);
+	}
+	
+	@Override
+	public List<EvaluateInfo> getEvaInfoByMovieId(int movieseq) {
+		// TODO Auto-generated method stub
+		return evaluateInfoMapper.getEvaInfoByMovieId(movieseq);
+	}
+
+}

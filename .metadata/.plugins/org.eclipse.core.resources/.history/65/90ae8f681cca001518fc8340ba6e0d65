@@ -1,0 +1,9 @@
+package com.ldl.ibatis.dbcp.dao.mapper;
+
+import com.ldl.ibatis.dbcp.pojo.VMovieInfo;
+
+public class VMovieInfoMapper {
+	
+	void save(VMovieInfo info);
+
+}

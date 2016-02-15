@@ -1,0 +1,10 @@
+package com.ldl.ibatis.dbcp.pojo;
+
+public class User {
+	private Integer userseq;
+	private String userId;
+	private String aliasName;
+	private String userPwd;
+	private String email;
+	private String gender;
+}

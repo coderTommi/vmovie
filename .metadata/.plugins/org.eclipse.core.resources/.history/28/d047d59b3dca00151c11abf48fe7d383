@@ -1,0 +1,5 @@
+package com.ldl.ibatis.dbcp.dao.impl;
+
+public class EvaluateInfoDaoImpl implements EvaluateInfoDao {
+
+}

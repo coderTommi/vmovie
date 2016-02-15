@@ -1,0 +1,9 @@
+package com.ldl.ibatis.dbcp.dao;
+
+import com.ldl.ibatis.dbcp.dao.mapper.EvaluateInfo;
+
+public interface EvaluateInfoDao {
+	
+	void save(EvaluateInfo info);
+
+}

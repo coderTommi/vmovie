@@ -1,0 +1,11 @@
+package com.ldl.ibatis.dbcp.dao.impl;
+
+import com.ldl.ibatis.dbcp.dao.EvaluateInfoDao;
+
+public class EvaluateInfoDaoImpl implements EvaluateInfoDao {
+	
+	public void save(com.ldl.ibatis.dbcp.dao.mapper.EvaluateInfo info) {
+		
+	};
+
+}

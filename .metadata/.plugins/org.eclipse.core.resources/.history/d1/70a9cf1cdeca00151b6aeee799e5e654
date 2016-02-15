@@ -1,0 +1,11 @@
+package com.ldl.service.impl;
+
+/**
+ * 注册类.
+ * @author lidongliang
+ *
+ */
+public interface RegisterService {
+	
+
+}

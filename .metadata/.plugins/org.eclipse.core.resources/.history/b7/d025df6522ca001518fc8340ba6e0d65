@@ -1,0 +1,24 @@
+package test.dao;
+
+import org.junit.BeforeClass;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.ldl.ibatis.dbcp.dao.UserDao;
+import com.ldl.ibatis.dbcp.dao.VMovieInfoDao;
+
+public class VMovieInfoTest {
+	
+	private static VMovieInfoDao movieDao;
+	
+	private static ApplicationContext factory;
+	
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception{
+		factory = new FileSystemXmlApplicationContext(
+				"WebContent/WEB-INF/spring-configuration/applicationJunit.xml");
+		userDao = (UserDao)factory.getBean("userDao");
+	}
+
+}

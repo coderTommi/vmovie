@@ -1,0 +1,30 @@
+package test.dao;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.ldl.ibatis.dbcp.dao.EvaluateInfoDao;
+import com.ldl.ibatis.dbcp.dao.UserDao;
+
+public class EvaluateInfoDaoTest {
+
+	private static EvaluateInfoDao evaluateInfoDao;
+	
+	private static ApplicationContext factory;
+	
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception{
+		factory = new FileSystemXmlApplicationContext(
+				"WebContent/WEB-INF/spring-configuration/applicationJunit.xml");
+		evaluateInfoDao = (EvaluateInfoDao)factory.getBean("evaluateInfoDao");
+	}
+	
+	@Test
+	public void save() throws Exception{
+		
+		
+	}
+}

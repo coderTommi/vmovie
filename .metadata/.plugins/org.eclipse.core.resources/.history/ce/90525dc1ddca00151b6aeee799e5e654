@@ -1,0 +1,19 @@
+package com.ldl.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping(value = "/register")
+public class RegisterController {
+
+	@RequestMapping(value = "/doIt")
+	public ModelAndView register(
+			@RequestParam(value = "orderId", required = true) String orderId)
+			throws Exception {
+		return new ModelAndView("index");
+	}
+
+}

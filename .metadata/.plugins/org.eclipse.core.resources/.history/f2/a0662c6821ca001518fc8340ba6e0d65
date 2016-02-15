@@ -1,0 +1,25 @@
+package com.ldl.ibatis.dbcp.dao.impl;
+
+import com.ldl.ibatis.dbcp.dao.UserDao;
+import com.ldl.ibatis.dbcp.dao.VMovieInfoDao;
+import com.ldl.ibatis.dbcp.dao.mapper.UserMapper;
+import com.ldl.ibatis.dbcp.dao.mapper.VMovieInfoMapper;
+import com.ldl.ibatis.dbcp.pojo.User;
+import com.ldl.ibatis.dbcp.pojo.VMovieInfo;
+
+public class VMovieInfoDaoImpl implements VMovieInfoDao {
+	
+	private VMovieInfoMapper movieMapper;
+	public void setMovieMapper(VMovieInfoMapper movieMapper) {
+		this.movieMapper = movieMapper;
+	}
+	
+	@Override
+	public void save(VMovieInfo info) {
+		
+	}
+	
+	public VMovieInfo getMovieBySeq(int seq) {
+		
+	};
+}

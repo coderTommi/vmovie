@@ -1,0 +1,13 @@
+package com.ldl.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class IndexController {
+	
+	public ModelAndView toIndex() throws Exception{
+		return new ModelAndView("index");
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.ldl.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ldl.ibatis.dbcp.dao.mapper.OrderMapper;
+import com.ldl.ibatis.dbcp.dao.mapper.UserMapper;
+import com.ldl.ibatis.dbcp.pojo.Order;
+import com.ldl.ibatis.dbcp.pojo.User;
+import com.ldl.service.OrderService;
+
+
+@Repository(value="userService")
+@Transactional
+public class OrderServiceImpl implements OrderService {
+	@Resource(name="userMapper")
+	private UserMapper userMapper;
+	
+	@Resource
+	private OrderMapper orderMapper;
+	
+	@Override
+	public User getUserById(String userName) {
+		User user = userMapper.getUserById(userName);
+		return user;
+	}
+	
+	@Override
+	public void addOrder(Order order) {
+		order.setStatus("0");
+		orderMapper.save(order);
+	}
+	
+	@Override
+	public User login(User user) {
+		User user1 = userMapper.getUserById(user.getAliasName());
+		
+		if(user1!=null && user1.getUserPwd().equals(user.getUserPwd()))
+		{
+			return user1;
+		}
+		return null;
+	}
+	
+	@Override
+	public List<Order> qryOrderList() {
+		return orderMapper.qryOrderList();
+	}
+	
+	@Override
+	public void updateOrder(String orderId) {
+		orderMapper.updateOrderById(orderId);
+	}
+
+	@Override
+	public void delOrder(String orderId) {
+		orderMapper.delOrderById(orderId);
+	}
+}

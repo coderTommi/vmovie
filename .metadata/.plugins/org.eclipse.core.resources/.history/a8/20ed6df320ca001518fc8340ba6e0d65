@@ -1,0 +1,11 @@
+package com.ldl.ibatis.dbcp.dao;
+
+import com.ldl.ibatis.dbcp.pojo.VMovieInfo;
+
+public class VMovieInfoDao {
+	
+	void save(VMovieInfo info);
+	
+	
+
+}

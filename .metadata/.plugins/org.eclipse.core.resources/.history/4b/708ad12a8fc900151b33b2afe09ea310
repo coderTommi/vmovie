@@ -1,0 +1,70 @@
+package test.dao;
+
+import java.util.List;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.ldl.ibatis.dbcp.dao.OrderDao;
+import com.ldl.ibatis.dbcp.dao.UserDao;
+import com.ldl.ibatis.dbcp.pojo.Order;
+import com.ldl.ibatis.dbcp.pojo.User;
+
+public class UserDaoTest {
+	
+	private static UserDao userDao;
+	
+	private static ApplicationContext factory;
+	
+	private static OrderDao orderDao;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception{
+		factory = new FileSystemXmlApplicationContext(
+				"WebContent/WEB-INF/spring-configuration/applicationJunit.xml");
+		userDao = (UserDao)factory.getBean("userDao");
+		orderDao = (OrderDao)factory.getBean("orderDao");
+	}
+	
+	@Test
+	public void saveUser() throws Exception{
+		User user = new User();
+		user.setAliasName("李栋梁");
+		user.setEmail("lidongliang@inspur.com");
+		user.setGender("1");
+		user.setUserPwd("lidongliang");
+		userDao.saveUser(user);
+	}
+	
+	@Test
+	public void getUser() throws Exception{
+		User user = userDao.getUserById("admin");
+		System.out.println(user.getUserId()+":"+user.getAliasName()+":"+user.getUserPwd());
+	}
+	
+	
+	@Test
+	public void saveOrder() throws Exception{
+		Order order = new Order();
+		order.setProduct("皮衣");
+		order.setName("李栋梁");
+		order.setMob("13822222222");
+		order.setProvince("山东省");
+		order.setCity("济南市");
+		order.setArea("高新区");
+		order.setAddress("草山岭小区");
+		order.setZfbprice("111.00");
+		order.setPay("1");
+		order.setGuest("赶紧派送啊");
+		orderDao.save(order);
+	}
+	
+	@Test
+	public void qryOrderList()throws Exception {
+		List list = orderDao.qryOrderList();
+		System.out.println(list.size());
+	}
+	
+}

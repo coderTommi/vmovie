@@ -1,0 +1,10 @@
+package com.ldl.ibatis.dbcp.dao.mapper;
+
+public class EvaluateInfo {
+	
+	private int evaseq;
+	private String evaMsg;
+	private int parentEva;
+	private int movieSeq;
+
+}

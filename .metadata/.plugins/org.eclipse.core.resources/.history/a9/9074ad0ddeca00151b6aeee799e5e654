@@ -1,0 +1,5 @@
+package com.ldl.service.impl;
+
+public class RegisterService {
+
+}
